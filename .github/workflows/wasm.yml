@@ -23,7 +23,7 @@ jobs:
 
       - name: Compile C++ to WASM
         run: |
-          source ./emsdk_env.sh
+          source ./emsdk/emsdk_env.sh
           emcc script.cpp -o script.html -s EXPORTED_FUNCTIONS='["_greet"]' -s MODULARIZE=1 -s ENVIRONMENT=web
 
       - name: Deploy to GitHub Pages
